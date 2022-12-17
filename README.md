@@ -13,6 +13,9 @@ What are trees?
 		- sorted in a particular way 
 		- used to store data that is comparable/ sortable 
 		- if you take any node on the tree,  every item that is less than that node is located to the left, and every item that is greater than is to the right 
+        - great insertion and searching as it is sorted
+        - the root is going to be a half way point so it makes it easier to compare and traverse 
+        - compare and go to the left or the right, each time, you are cutting your options in half 
 - Great for web scraping nested HTML
 -  a step up from linked lists
 - a data structure that consists of nodes in a parent/child relationship or a hierarchical structure
