@@ -43,3 +43,7 @@ What are trees?
 	- artificial intelligence 
 	- folders in operating system
 	- JSON
+
+- Big O
+   - insertion O(log n) (not guaranteed)
+   - searching O(log n) (not guaranteed)

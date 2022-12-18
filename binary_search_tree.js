@@ -98,3 +98,7 @@ class BinarySearchTree {
         return false
     }
 }
+
+// Big O
+    // insertion O(log n) (not guaranteed)
+    // searching O(log n) (not guaranteed)
