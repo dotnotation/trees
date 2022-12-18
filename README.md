@@ -59,3 +59,15 @@ How to traverse a tree:
                 - dequeue or shift a node from the queue and push the value of the node into the variable that stores the nodes
                 - if there is a left or right property on the node dequeued, add it to the queue
     - Depth-first search
+        - visit nodes vertically all the way down to the end of the tree before visiting siblings 
+        - vertical search 
+        - preorder
+            - visit the first node, and then all the way down on the left side and then go back up 
+            - steps - recursively
+                - create a variable to store the values of the nodes visited
+                - have a current variable that stores the root
+                - write a helper function which accepts a node
+                    - push the value of the node to the storage variable
+                    - if the node has a left or right property call the helper function with the left/ right property 
+                - invoke the helper function with the current variable
+                - return the array of visited
