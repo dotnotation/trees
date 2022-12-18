@@ -53,15 +53,48 @@ class BinarySearchTree {
         }
     }
 
-    find(){
+    find(val){
         // start at root
-        // check if there is a root, if not, then return null
+        // check if there is a root, if not, then return false
         // if there is a root, check if the value === root.val
         // if not, check to see if the value if greater or less than the root
         // if greater / if less
             // check to see if there is a node to the right/ left
                 // if yes, move to that node and repeat
                 // if not, return 
-        
+        if (!this.root) return false 
+
+        let foundNode = false
+        let current = this.root
+
+        while (current && !foundNode){
+            // current is our check to make sure we haven't reached the end of the tree
+            if (val < current.val){
+                current = current.left
+            } else if (val > current.val){
+                current = current.right
+            } else {
+                foundNode = true 
+            }
+        }
+        if (!foundNode) return false
+        return current 
+    }
+
+    contains(val){
+        // same as find but return true or false
+        if (this.root === null) return false
+        let current = this.root
+        let found = false
+        while (current && !found){
+            if (val < current.val){
+                current = current.left
+            } else if (val > current.val){
+                current = current.right 
+            } else {
+                return true
+            }
+        }
+        return false
     }
 }
