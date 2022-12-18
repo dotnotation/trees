@@ -24,5 +24,32 @@ class BinarySearchTree {
             // check to see if there is a node to the left
                 // if yes, move to that node and repeat
                 // if no, add the new node as the left property
+        let newNode = new Node(val)
+
+        if (!this.root){
+            this.root = newNode
+            return this
+        } else {
+            let current = this.root
+            while(true){
+                if (val === current.value) return undefined
+                // accounting for duplicates 
+                if (val < current.val){
+                    if (!current.left){
+                        current.left = newNode 
+                        return this
+                    } else {
+                        current = current.left 
+                    }
+                } else if (val > current.val){
+                    if (current.right === null){
+                        current.right = newNode
+                        return this
+                    } else {
+                        current = current.right 
+                    }
+                }
+            }
+        }
     }
 }
