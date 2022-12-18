@@ -31,4 +31,18 @@ class TreeTraversal {
         }
         return visited
     }
+
+    dfsPreOrder(){
+        // visiting nodes in a vertical fashion starting at the left and going to the end of the tree
+        let visited = []
+        let current = this.root
+
+        function traverse(node){
+            visited.push(node.val)
+            if (node.left) traverse(node.left)
+            if (node.right) traverse(node.right)
+        }
+        traverse(current)
+        return visited 
+    }
 }
