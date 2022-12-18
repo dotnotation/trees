@@ -52,4 +52,16 @@ class BinarySearchTree {
             }
         }
     }
+
+    find(){
+        // start at root
+        // check if there is a root, if not, then return null
+        // if there is a root, check if the value === root.val
+        // if not, check to see if the value if greater or less than the root
+        // if greater / if less
+            // check to see if there is a node to the right/ left
+                // if yes, move to that node and repeat
+                // if not, return 
+        
+    }
 }
