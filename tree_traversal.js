@@ -45,4 +45,19 @@ class TreeTraversal {
         traverse(current)
         return visited 
     }
+
+    dfsPostOrder(){
+        let visited = []
+
+        function traverse(node){
+            if (node.left) traverse(node.left)
+            if (node.right) traverse(node.right)
+            visited.push(node.value)
+            // notice that this comes after in post order 
+            // this allows us to go all the way to the bottom of the tree
+        }
+        traverse(this.root)
+
+        return visited
+    }
 }
