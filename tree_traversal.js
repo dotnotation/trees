@@ -60,4 +60,19 @@ class TreeTraversal {
 
         return visited
     }
+
+    dfsInOrder(){
+        let visited = []
+
+        function traverse(node){
+            if (node.left) traverse(node.left)
+            visited.push(node.value)
+            // note the position
+            // this allows us to go to the bottom most left, than the parent and then the right
+            if (node.right) traverse(node.right)
+        }
+        traverse(this.root)
+
+        return visited 
+    }
 }

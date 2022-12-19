@@ -84,3 +84,13 @@ How to traverse a tree:
                     - if the node has a left then right property, call the helper function with the left then right property of the node
                     - push the value of the node to the variable that stores the values
                     - invoke the helper function with the current variable
+        - inorder
+            - traverse the entire left side and then visit the node and then the entire right 
+            - you start at the bottom most left, then to the parent and then to that parent's right , and up until the root and then do the same on the right side
+            - steps - recursively
+                - create a variable to store the values of nodes visited
+                - store the root of the BST in a variable called current
+                - write a helper function which accepts a node
+                    - if the node has a left then right property, call the helper function with the left then right property of the node
+                    - push the value of the node to the variable that stores the values
+                    - invoke the helper function with the current variable
