@@ -94,3 +94,23 @@ How to traverse a tree:
                     - if the node has a left then right property, call the helper function with the left then right property of the node
                     - push the value of the node to the variable that stores the values
                     - invoke the helper function with the current variable
+
+BFS vs DFS?
+	- depends on the tree
+	- if you have wide tree
+		- BFS
+			- you have a queue which will have to store a ton of items as you traverse the tree that are waiting
+			- lots of nodes to keep track of
+		- DFS
+			- you are just going down the left-most branch, so if it is wide, it makes more sense to go deep first as it will be a space improvement 
+			- fewer node to keep track of 
+	- if you have a deep/long tree
+		- BFS
+			- has a lot less to keep track of 
+		- DFS
+			- will have to keep track of a lot of nodes at once so more space is taken up 
+	- DFS InOrder
+		- if you want to return the elements in order
+	- DFS PreOrder
+		- if you are trying to clone or duplicate a tree
+		- easy for reconstructing the tree
